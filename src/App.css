@@ -1,4 +1,17 @@
+.header{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.header h1{
+  font-size: 35px;
+  font-weight: 700;
+  color:rgb(104, 92, 81); ;
+}
+.header h3{
+  font-size: 23px;
+  color:rgb(161, 147, 134); ;
 
+}
 
 .App-logo {
   height: 40vmin;

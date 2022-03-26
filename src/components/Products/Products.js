@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import Sideber from '../Sideber/Sideber';
 import  './Products.css';
 
 const Products = () => {
 const [products, setProducts] = useState([]);
 const [gun, setGun] = useState([]);
-
+// console.log(gun);
 useEffect( () =>{
     fetch('data.json')
     .then(res=>res.json())
@@ -14,36 +15,31 @@ useEffect( () =>{
 }, []);
 
 const addToCart = (product) =>{
+    // console.log(product);
     const newGun =[...gun, product]
     setGun(newGun)
-    console.log(product.name);
+    // console.log(newGun);
 
 }
 
     return (
+
         <div  className="main-container">
 
-<div className="products-container">
-
+      <div className="products-container">
 {
     products.map (product=><Product
      key={product.id}
      product={product}
      addToCart={addToCart}
-     
-     ></Product>)
+      ></Product>)
 }
-
 </div>
 
 <div className="cart-container">
-
-<h1>Selected Guns</h1>
-
-   
-
-    </div>
-             
+<Sideber gun={gun}></Sideber>
+ </div>
+         
     </div>
     );
 };

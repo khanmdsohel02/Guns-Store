@@ -41,3 +41,10 @@ margin-right: 10px;
     background-color:aqua ;
     cursor: pointer;
 }
+@media screen and ( max-width: 700px) {
+    .product img{
+        width: 250px;}
+        .product {
+            width: 270px ;}
+
+}
