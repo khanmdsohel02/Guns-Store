@@ -12,6 +12,9 @@ const {img, name, price, category}= props.product
          <h4>Category: {category}</h4>
 
         </div>
+        <button className='cart-btn'>
+            <p>ADD TO CART</p>
+        </button>
         </div>
     );
 };

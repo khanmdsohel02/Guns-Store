@@ -4,12 +4,7 @@ function App() {
   return (
     <div className="App">
 
-<Products>
-
-
-
-
-</Products>
+<Products></Products>
 
     </div>
   );
