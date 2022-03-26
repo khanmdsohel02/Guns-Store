@@ -3,14 +3,22 @@ import Product from '../Product/Product';
 import  './Products.css';
 
 const Products = () => {
-const [products, setProducts] = useState([])
+const [products, setProducts] = useState([]);
+const [gun, setGun] = useState([]);
 
 useEffect( () =>{
     fetch('data.json')
     .then(res=>res.json())
     .then(data=>setProducts(data))
 
-}, [])
+}, []);
+
+const addToCart = (product) =>{
+    const newGun =[...gun, product]
+    setGun(newGun)
+    console.log(product.name);
+
+}
 
     return (
         <div  className="main-container">
@@ -21,6 +29,7 @@ useEffect( () =>{
     products.map (product=><Product
      key={product.id}
      product={product}
+     addToCart={addToCart}
      
      ></Product>)
 }
@@ -29,10 +38,12 @@ useEffect( () =>{
 
 <div className="cart-container">
 
-<h1>helllow cart</h1>
+<h1>Selected Guns</h1>
+
+   
 
     </div>
-            
+             
     </div>
     );
 };
