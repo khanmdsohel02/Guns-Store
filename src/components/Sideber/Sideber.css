@@ -1,3 +1,18 @@
-.select-item{
+ .selected-guns{
+display: flex;
+align-items: center;
+justify-content:flex-start;
+}
+.selected-guns img{
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+}
+.cart{
+    padding-top: 25px;
     padding-left: 25px;
+    position: sticky;
+    top: 25px;
 }

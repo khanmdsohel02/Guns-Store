@@ -5,6 +5,7 @@ import './Product.css'
 
 
 const Product = ( {addToCart, product}) => {
+    // console.log(product);
 const {img, name, price, category}= product
     return (
         <div className='product'>
